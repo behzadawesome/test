@@ -1,0 +1,17 @@
+[project]
+name = "machine-vision-defect-prototype"
+version = "0.1.0"
+description = "Known-defect and anomaly-detection prototype for machined-part inspection"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "opencv-python-headless>=4.10", "Pillow>=10.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
